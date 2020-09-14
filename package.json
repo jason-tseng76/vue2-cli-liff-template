@@ -1,0 +1,65 @@
+{
+  "name": "hello",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "server-stage": "cross-env NODE_ENV=production APP_ENV=stage vue-cli-service serve",
+    "build": "cross-env NODE_ENV=production APP_ENV=production vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@line/liff": "^2.4.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "settings": {
+      "import/resolver": {
+        "alias": [
+          [
+            "~",
+            "./src"
+          ]
+        ]
+      }
+    },
+    "rules": {
+      "no-underscore-dangle": 0,
+      "max-len": 0,
+      "camelcase": 0
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
